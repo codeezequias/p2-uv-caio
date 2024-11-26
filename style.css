@@ -1,631 +1,304 @@
-/* Estilos gerais para o Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofadi+One&display=swap');
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #161616;
+}
+p{
+    color: rgb(255, 255, 255);
+}
+
+.th{
+    position: relative;
+    top: -1473px;
+    width: 300px;
+    margin-left: 100px;
+}
+
+.th2{
+    position: relative;
+    top: -1473px;
+    width: 300px;
+    margin-left: 146px;
+}
+
+.th3{
+    position: relative;
+    top: -1462px;
+    width: 300px;
+    margin-left: 145px;
+}
+
+
+.retangulo {
+    position: relative;
+    top: -200px;
+    margin-left: 100px;
+    width: 300px;
+    height: 420px;
+    background-color: #8C080C; /* Cor do retângulo (azul) */
+}
+.retangulo2 {
+    position: relative;
+    top: -620px;
+    margin-left: 550px;
+    width: 300px;
+    height: 420px;
+    background-color: #8C080C; /* Cor do retângulo (azul) */
+}
+.retangulo3 {
+    position: relative;
+    top: -1040px;
+    margin-left: 1000px;
+    width: 300px;
+    height: 420px;
+    background-color: #8C080C; /* Cor do retângulo (azul) */
+}
+
+
+
+/* Estilo para a navegação fixa */
 .navbar {
-    position: relative;
-    top: 3rem;
-    left: 2rem;
-    padding: 10px;
+    position: fixed; /* Faz a navegação ficar fixa no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Cor preta com 60% de opacidade */
+    z-index: 1000; /* Garante que a barra de navegação fique sobre outros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombras para um efeito mais destacado */
+    backdrop-filter: blur(10px); /* Aplica um efeito de desfoque no fundo da navbar */
 }
 
-/* Links dentro do Navbar */
-.navbar a {
-    color: #000000;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 20px;
-    transition: color 0.3s;
+/* Remover os estilos de lista */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-/* Efeito de hover para os links no Navbar */
-.navbar a:hover {
-    color: #8C080C;
+/* Estilo para os itens da lista */
+.navbar ul li {
+    display: inline-block;
 }
 
-/* Remover margem no último link */
-.navbar a:last-child {
-    margin-right: 0;
-}
-
-/* Definição de fontes customizadas */
-@font-face {
-    font-family: 'FonteB';
-    src: url("components/Bouncy-PERSONAL_USE_ONLY.otf") format('woff2')
-}
-
-@font-face {
-    font-family: 'FonteC';
-    src: url("components/LEMONMILK-Regular.otf") format('woff2')
-}
-
-@font-face {
-    font-family: 'Fontekatana';
-    src: url("components/KATANA.ttf") format('woff2')
-}
-
-/* Estilo para imagem Hippo com efeito de hover */
-.imageHippo {
-    position: relative;
-    top: -20rem;
-    transition: transform 0.3s ease, box-shadow 0.4s ease;
-    left: 35rem;  
-}
-
-.imageHippo2 {
-    width: 200px;
-    position: relative;
-    top: 20rem;
-    transition: transform 0.3s ease, box-shadow 0.4s ease;
-    left: 10rem;  
-}
-
-
-/* Estilo para o título principal */
-.title {
-    font-family: "Fontekatana";
-    font-size: 6rem;
-    position: relative;
-    top: -8rem;
-    left: 24rem;
-    text-shadow: -2px -2px 5px rgba(255, 123, 0, 0.8);
-}
-
-/* Estilo para o título secundário */
-.title2 {
-    font-family: "FonteB";
-    font-size: 6rem;
-    position: absolute;
-    top: 24rem;
-    left: 39rem;
-    color: rgb(0, 0, 0);
-    z-index: 2;
-    text-shadow: -2px -2px 5px rgba(255, 123, 0, 0.8);
-}
-
-/* Estilo para o título terciário */
-.title3 {
-    font-family: "FonteB";
-    font-size: 6rem;
-    position: absolute;
-    top: 24rem;
-    left: 51rem;
-    color: rgb(0, 0, 0);
-    text-shadow: -2px -2px 5px rgba(255, 123, 0, 0.8);
-}
-
-/* Estilo do texto do resumo */
-.Resumo {
-    font-size: 25px;
-    font-family: "FonteC";
-    color: rgb(0, 0, 0);
-    position: relative;
-    top: 2rem;
-    left: 2rem;
-}
-
-/* Estilos para o formulário */
-header {
-    background-color: #333;
+/* Estilo para os links */
+.navbar ul li a {
+    display: block;
+    padding: 15px 30px;
     color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease; /* Efeito suave para o hover */
+}
+
+/* Efeito de hover nos links */
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo mais clara no hover */
+}
+
+/* Espaçamento inferior para garantir que o conteúdo da página não fique atrás da barra de navegação */
+.content {
+    padding-top: 60px; /* Adiciona espaçamento suficiente para que o conteúdo não fique coberto pela navegação */
     padding: 20px;
-    text-align: center;
 }
 
-.form-container {
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 1000px;
-    text-align: center;
+.logo{
     position: relative;
-    top: -40rem;
-    left: 15rem;
-    transition: transform 0.3s ease-in-out;
-    font-family: 'FonteB';
-    src: url("components/Bouncy-PERSONAL_USE_ONLY.otf") format('woff2')
+    top: 150px;
+    width: 200px;
+    margin-left: 40px;
 }
 
-/* Efeito de hover no formulário */
-.form-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Estilo dos campos de entrada do formulário */
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Estilo para o botão do formulário */
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #8C080C;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Efeito de hover no botão */
-button:hover {
-    background-color: #bb1117;
-}
-
-/* Estilos para os Cards de Personagens */
-.Personagens {
-    display: flex;
-    justify-content: space-around; 
-    flex-wrap: nowrap;
-    padding: 2rem;
-}
-
-/* Estilo geral para os Cards */
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 350px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    overflow: hidden;
-    text-align: center;
-    margin-bottom: 2rem;
+.img1{
+    width: 600px;
     position: relative;
+    top: -450px;
+    margin-left: 741px;
 }
 
-/* Estilo para cada card, posicionamento específico */
-.card:nth-child(1) {
-    top: 180px;
-    left: 20px;
-}
-
-.card:nth-child(2) {
-    top: 180px;
-    left: 0;
-}
-
-.card:nth-child(3) {
-    top: 180px; 
-    left: -20px;
-}
-
-/* Efeito de hover nos Cards */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para a imagem dentro do card */
-.card img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #ddd;
-}
-
-/* Estilo para o conteúdo do card (exibido no hover) */
-.card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 15px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.3s ease;
-}
-
-/* Exibição do conteúdo do card no hover */
-.card:hover .card-content {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Títulos e parágrafos dentro do card */
-.card-content h1 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.card-content p {
-    font-size: 1rem;
-    color: #fff;
-    line-height: 1.5;
-    margin-top: 10px;
-}
-
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-    .Personagens {
-        justify-content: center;
-    }
-
-    .card {
-        max-width: 100%; 
-    }
-}
-
-/* Estilo para as imagens de personagens */
-.imageH, .imageT, .imageK {
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-}
-
-/* Efeito para as imagens challenger */
-.ImgChallenger {
+.txt1{
     position: relative;
-    top: 7rem;
-    left: 1rem;
-    width: 400px;
-    height: 400px;
-    transition: transform 0.3s ease, box-shadow 0.4s ease;
-    border-radius: 20px;
+    top: 150px;
+    margin-left: 40px;
 }
 
-.ImgChallenger:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transform: perspective(900px) translateY(-5%) rotateX(20deg) translateZ(0);
-}
-
-/* Estilo para a legenda da imagem challenger */
-.ep1 {
+.test{
     position: relative;
-    font-size: 20px;
-    top: 49rem;
-    left: 2rem;
+    top: -1450px;
+    margin-left: 85px;
 }
 
-/* Efeito para a imagem knock */
-.ImgKnock {
+.test2{
     position: relative;
-    top: -31rem;
-    left: 30rem;
-    width: 400px;
-    height: 400px;
-    transition: transform 0.3s ease, box-shadow 0.4s ease;
-    border-radius: 20px;
+    top: -1700px;
+    margin-left: 525px;
 }
 
-.ImgKnock:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transform: perspective(900px) translateY(-5%) rotateX(20deg) translateZ(0);
-}
-
-/* Estilo para a legenda da imagem knock */
-.ep2 {
+.test3{
     position: relative;
-    font-size: 20px;
-    top: 10rem;
-    left: 32rem;
+    top: -1900px;
+    margin-left: 990px;
 }
 
-/* Efeito para a imagem final */
-.ImgFinal {
+.ft{
+    width: 500px;
     position: relative;
-    top: -71rem;
-    left: 64rem;
-    width: 400px;
-    height: 400px;
-    transition: transform 0.3s ease, box-shadow 0.4s ease;
-    border-radius: 20px;
+    top: -1700px;
 }
-
-.ImgFinal:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    transform: perspective(900px) translateY(-5%) rotateX(20deg) translateZ(0);
-}
-
-/* Estilo para a legenda da imagem final */
-.ep3 {
-    position: relative;
-    font-size: 20px;
-    top: -28rem;
-    left: 65rem;
-}
-
-/* Estilos para os links */
-.link1, .link2, .link3 {
-    font-size: 30px !important;
-    color: #000000;
-    transition: color 0.3s;
-    text-decoration: none;
-}
-
-.link1:hover, .link2:hover, .link3:hover {
-    color: #8C080C;
-}
-
-/* Posições específicas para os links */
-.link1 {
-    position: relative;
-    top: -85rem;
-    left: 3rem;
-}
-
-.link2 {
+.ft2{
+    width: 500px;
     position: relative;
     top: -1400px;
-    left: 17rem;
-}
+    margin-left: -500px;
 
-.link3 {
+}
+.ft3{
+    width: 500px;
     position: relative;
-    top: -1495px;
-    left: 30rem;
+    top: -1100px;
+    margin-left: -500px;
+
 }
 
-/* Estilos para o tema claro */
-body.light-theme {
-    background-color: #ffffff;
-    color: #333333;
-}
-
-/* Estilos para o tema escuro */
-body.dark-theme {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-/* Estilos para o botão de alternância de tema */
-.switch {
+.txtt{
     position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    border-radius: 50%;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-}
-
-/* Quando o botão de alternância está ativo */
-input:checked + .slider {
-    background-color: #b9b9b9;
-}
-
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
-
-/* Estilos para o tema escuro */
-body.dark-theme .navbar {
-    background-color: #000000;
-}
-
-body.dark-theme .navbar a {
-    color: #f0f0f0;
-}
-
-body.dark-theme .form-container {
-    background-color: #333;
-    color: #fff;
-}
-
-body.dark-theme .form-container input[type="text"],
-body.dark-theme .form-container input[type="email"],
-body.dark-theme .form-container textarea {
-    background-color: #444;
-    border: 1px solid #555;
-    color: #fff;
-}
-
-body.dark-theme .form-container button {
-    background-color: #8C080C;
-}
-
-body.dark-theme .form-container button:hover {
-    background-color: #bb1117;
-}
-
-body.dark-theme .card {
-    background-color: #333;
-    color: #f0f0f0;
-    border: 1px solid #444;
-}
-
-body.dark-theme .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-theme .card-content {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-body.dark-theme .card-content h1,
-body.dark-theme .card-content p {
-    color: #fff;
-}
-
-body.dark-theme .link1,
-body.dark-theme .link2,
-body.dark-theme .link3 {
-    color: #f0f0f0;
-}
-
-body.dark-theme .link1:hover,
-body.dark-theme .link2:hover,
-body.dark-theme .link3:hover {
-    color: #ff6347;
-}
-
-body.dark-theme .title,
-body.dark-theme .title2,
-body.dark-theme .title3 {
-    text-shadow: -2px -2px 5px rgba(255, 123, 0, 0.8);
-}
-
-body.dark-theme .Resumo {
-    color: #f0f0f0;
-}
-
-/* Efeito para imagens no tema escuro */
-body.dark-theme .ImgChallenger,
-body.dark-theme .ImgKnock,
-body.dark-theme .ImgFinal,
-body.dark-theme .imageHippo {
-    filter: brightness(0.8);
-}
-
-body.dark-theme .Formizin{
-color: white;
+    top: -1950px;
+    margin-left: 520px;
 }
 
 
-/* Estilização do formulário e dos resultados */
-#search-container {
+.txttt{
     position: relative;
-    top: 20px;
-    left:80rem;
-    right: 20px;
-    z-index: 1000;
+    top: -1800px;
+    margin-left: 520px;
+}
+
+.txtttt{
+    position: relative;
+    top: -1700px;
+    margin-left: 520px;
+}
+
+.png{
+    width: 500px;
+    position: relative;
+    top: -1400px;
+    margin-left: 525px;
+}
+
+.pt{
+    width: 500px;
+    position: relative;
+    top: -1900px;
+    margin-left: 50px;
+}
+
+.pt2{
+    width: 500px;
+    position: relative;
+    top: -1900px;
+    margin-left: 50px;
+}
+
+.pt3{
+    width: 500px;
+    position: relative;
+    top: -2400px;
+    margin-left: 1100px;
+}
+
+.lc{
+    width: 500px;
+    position: relative;
+    top: -1800px;
+    margin-left: 525px;
+}
+
+.lc4{
+    width: 500px;
+    position: relative;
+    top: -2700px;
+    margin-left: 50px;
+}
+
+.lc2{
+    width: 500px;
+    position: relative;
+    top: -2700px;
+    margin-left: 50px;
+}
+
+.lc3{
+    width: 500px;
+    position: relative;
+    top: -3100px;
+    margin-left: 1100px;
+}
+
+.cnt{
+    width: 500px;
+    position: relative;
+    top: -2000px;
+    margin-left: 525px;
+}
+
+.cnt1{
+    width: 500px;
+    position: relative;
+    top: -2600px;
+    margin-left: 50px;
+}
+.cnt2{
+    width: 500px;
+    position: relative;
+    top: -2600px;
+    margin-left: 50px;
+}
+
+.cnt3{
+    width: 500px;
+    position: relative;
+    top: -3100px;
+    margin-left: 1100px;
+}
+
+form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
     width: 300px;
+    margin: 20px auto;
+    color: #fff;
 }
 
-#search-form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+form label {
+    display: block;
+    margin-bottom: 8px;
 }
 
-#anime-search {
+form input, form textarea {
     width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#search-button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-.botaozada{
-    font-size: 10px;
-    position: relative;
-    top:0;
-    left:-2rem;
-}
-
-#search-results {
-    position: absolute;
-    margin-top: 50px;
-    width: 100%;
-    display: none;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-#search-results div {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-
-#search-results img {
-    max-width: 100px;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-#search-results h3 {
-    margin: 0;
-    font-size: 16px;
-}
-
-#search-results p {
-    font-size: 14px;
-    color: #555;
-}
-
-
-/* Altere a cor do título */
-.anime-title {
-    color: rgb(0, 0, 0);
-    font-size: 1.5em;
-}
-
-/* Altere a cor do texto */
-.anime-description {
-    color: rgb(0, 0, 0);
-    font-size: 1em;
-    margin-left: 10px;
-}
-
-/* Estilos gerais para o Navbar */
-/* Barra de navegação fixa */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff; /* Ou uma cor diferente conforme o tema */
     padding: 10px;
-    z-index: 1000; /* Garante que a barra de navegação fique acima de outros elementos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
-}
-/* Links dentro do Navbar */
-.navbar a {
-    color: #000;
-    text-decoration: none;
-    margin-right: 20px;
-    font-size: 20px;
-    transition: color 0.3s;
-}
-.navbar a:hover {
-    color: #ff6347;
+    margin-bottom: 12px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
 }
 
-.navbar a:last-child {
-    margin-right: 0;
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.switch {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001; /* Fica acima da navbar */
+
+form button:hover {
+    background-color: #45a049;
 }
